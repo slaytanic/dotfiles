@@ -11,7 +11,7 @@ if [ "$(uname)" = "Darwin" ]; then
 elif [ "$(uname -s)" = "Linux" ]; then
     if [ -f /etc/debian_version ]; then
         if sudo -n true 2>/dev/null; then
-            sudo apt install zsh curl git command-not-found
+            sudo apt update && sudo apt install -y zsh curl git command-not-found
         fi
     fi
 else
